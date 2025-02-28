@@ -1,34 +1,31 @@
 import java.util.Scanner;
-public class prime_no 
-{
+public class prime_no {
     public static void main(String[] args)
     {
         Scanner var2=new Scanner(System.in);
-        System.out.print("enter the number:");
+        System.out.print("ENTER THE NUMBER:");
         int num=var2.nextInt();
-        int i;
-        if(num>1)
+        if(num>2)
         {
-            for(i=2;i<num;i++)
+            for(int i=2;i<=num;i++)
             {
                 if(num%i==0)
                 {
+                    System.out.println(num+" is not prime number");
                     break;
                 }
-            }
-            if(i==num)
-            {
-                System.out.println(num+" is prime number");
-            }
-            else
-            {
-                System.out.println(num+" is not prime number");
+                else{
+                    System.out.println(num+" is prime number");
+                    break;
+                }
             }
         }
         else
         {
-            System.out.println(num+" is not prime number");
+            System.out.println(num+ " is prime number");
         }
-        var2.close();   
-    }  
+        var2.close();
+        
+    }
+    
 }
